@@ -4,7 +4,6 @@ services: docker
 
 env:
   - DOCKER_COMPOSE_VERSION=1.23.2
-  - DOCKER_USERNAME=fthiagomedeiros
 
 before_install:
   - docker -v && docker-compose -v
