@@ -19,4 +19,3 @@ install:
   - docker-compose -f udacity-c3-deployment/docker/docker-compose-build.yaml build --parallel 
   - docker login --username=${DOCKER_USERNAME} --password=${DOCKER_PASSWORD}
   - docker-compose -f udacity-c3-deployment/docker/docker-compose-build.yaml push
-
