@@ -3,20 +3,22 @@ kind: Deployment
 metadata:
   name: frontend
   labels:
-    app: frontend
+    service: frontend
 spec:
+  replicas: 2
   selector:
     matchLabels:
-      app: frontend
-  replicas: 2
+      service: frontend
+      api: external
   template:
     metadata:
       labels:
-        app: frontend
+        service: frontend
+        api: external
     spec:
       containers:
       - image: fthiagomedeiros/udacity-frontend
-        name: frontend-pod
+        name: frontend
         imagePullPolicy: Always          
         ports:
         - containerPort: 80
@@ -28,4 +30,18 @@ spec:
             memory: "1024Mi"
             cpu: "500m"                
       restartPolicy: Always
-
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    service: frontend
+  name: frontend
+spec:
+  ports:
+    - name: "8100"
+      port: 8100
+      targetPort: 80
+  selector:
+    service: frontend
+#  type: LoadBalancer

@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
@@ -6,13 +6,16 @@ metadata:
   name: backend-feed
 spec:
   replicas: 3
+  selector:
+    matchLabels:
+      service: backend-feed
   template:
     metadata:
       labels:
         service: backend-feed
     spec:
       containers:
-      - image: scheele/udacity-restapi-feed
+      - image: fthiagomedeiros/udacity-restapi-feed
         name: backend-feed
         imagePullPolicy: Always  
         resources:
@@ -77,3 +80,17 @@ spec:
       - name: aws-secret
         secret:
           secretName: aws-secret       
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    service: backend-feed
+  name: backend-feed
+spec:
+  ports:
+    - name: "8080"
+      port: 8080
+      targetPort: 8080
+  selector:
+    service: backend-feed
