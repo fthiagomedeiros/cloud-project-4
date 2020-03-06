@@ -61,7 +61,7 @@ ionic build
 
 To run the services locally, you have to set the environment variables to be provided to the system.
 
-'''typescript
+```typescript
 
 export const config = {
   "dev": {
@@ -75,14 +75,20 @@ export const config = {
     "aws_media_bucket": "bucket_name",
     "url": "localhost:8100" }
 };
-'''
+```
 
 
 ##### Setup Docker Environment
 You'll need to install docker https://docs.docker.com/install/. Open a new terminal within the project directory and run:
 
-1. Build the images: `docker-compose -f docker-compose-build.yaml build --parallel`
-2. Run the container: `docker-compose up`
+1. Build the images: 
+
+```bash
+docker-compose -f docker-compose-build.yaml build --parallel```
+
+2. Run the container: 
+```bash
+docker-compose up```
 
 
 #### 2.2. The project have public docker images
