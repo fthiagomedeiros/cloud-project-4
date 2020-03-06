@@ -59,7 +59,24 @@ ionic build
 
 #### 2.1. The app is containerized
 
-> _tip_: Before execute this step, please, change the code as suggested in topic 2.3 below.
+To run the services locally, you have to set the environment variables to be provided to the system.
+
+'''typescript
+
+export const config = {
+  "dev": {
+    "username": "db_username",
+    "password": "db_password",
+    "database": "udagram",
+    "host": "database_endpoint",
+    "dialect": "postgres",
+    "aws_reigion": "us-east-1",
+    "aws_profile": "default",
+    "aws_media_bucket": "bucket_name",
+    "url": "localhost:8100" }
+};
+'''
+
 
 ##### Setup Docker Environment
 You'll need to install docker https://docs.docker.com/install/. Open a new terminal within the project directory and run:
