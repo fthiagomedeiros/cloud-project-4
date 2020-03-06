@@ -52,30 +52,25 @@ ionic build
 ```
 ***
 
-## Project topics
+## Project Rubric (Execution)
+***
 
-### Container
+### 2. Container
 
 #### 2.1. The app is containerized
 
-> _tip_: Before execute this step building all docker images, please, make the code changes as suggested in topic 2.3 below.
+> _tip_: Before execute this step, please, change the code as suggested in topic 2.3 below.
 
-To build all Docker images together at once, access this [README](https://github.com/fthiagomedeiros/udacity-cloud-project4/blob/master/udacity-c3-deployment/docker/README.md) file and follow the instructions:
+##### Setup Docker Environment
+You'll need to install docker https://docs.docker.com/install/. Open a new terminal within the project directory and run:
 
-You should run only the FIRST and THIRD commands as shown in README file. These commands must be run into the folder ./udacity-cloud-project4/udacity-c3-deployment/docker/
-At the final of the process, you can run ```docker images``` and you will be able to see all images
+1. Build the images: `docker-compose -f docker-compose-build.yaml build --parallel`
+2. Run the container: `docker-compose up`
+
 
 #### 2.2. The project have public docker images
 
-The Dockerhub images are available in the links below.
-
-[Reverse Proxy image](https://hub.docker.com/r/fthiagomedeiros/reverseproxy) 
-
-[Frontend image](https://hub.docker.com/r/fthiagomedeiros/udacity-frontend)
-
-[REST API User](https://hub.docker.com/r/fthiagomedeiros/udacity-restapi-user)
-
-[REST API Feed](https://hub.docker.com/r/fthiagomedeiros/udacity-restapi-feed)
+**The Dockerhub images are available in the following links:** [Reverse Proxy image](https://hub.docker.com/r/fthiagomedeiros/reverseproxy), [Frontend image](https://hub.docker.com/r/fthiagomedeiros/udacity-frontend), [REST API User](https://hub.docker.com/r/fthiagomedeiros/udacity-restapi-user), [REST API Feed](https://hub.docker.com/r/fthiagomedeiros/udacity-restapi-feed)
 
 
 #### 2.3. The applications runs in a container without errors
@@ -83,6 +78,4 @@ The Dockerhub images are available in the links below.
 To run the application locally, you have to set some environment variables and credentials for access to AWS S3 resource before run the step 2.1 above.
 In order to facilitate the code execution, I have provided the files config.ts that has harcoded the required variables. 
 
-The config.ts files are into the folders  
-./udacity-c3-restapi-feed/src/config/config.ts and 
-./udacity-c3-restapi-user/src/config/config.ts
+The config.ts files are into the folders _**./udacity-c3-restapi-feed/src/config/config.ts**_ and _**./udacity-c3-restapi-user/src/config/config.ts**_
