@@ -52,12 +52,12 @@ ionic build
 ```
 ***
 
-## Project Rubric (Execution)
+# Project Rubric (Execution)
 ***
 
-### 2. Container
+## 2. Container
 
-#### 2.1. The app is containerized
+### 2.1. The app is containerized
 
 To run the services locally, you have to set the environment variables to be provided to the system.
 
@@ -78,25 +78,26 @@ export const config = {
 ```
 
 
-##### Setup Docker Environment
+#### Setup Docker Environment
 You'll need to install docker https://docs.docker.com/install/. Open a new terminal within the project directory and run:
 
-1. Build the images: 
+**1. Build the images:**
 
 ```bash
 docker-compose -f docker-compose-build.yaml build --parallel```
 
-2. Run the container: 
+**2. Run the container:**
+
 ```bash
 docker-compose up```
 
 
-#### 2.2. The project have public docker images
+### 2.2. The project have public docker images
 
 **The Dockerhub images are available in the following links:** [Reverse Proxy image](https://hub.docker.com/r/fthiagomedeiros/reverseproxy), [Frontend image](https://hub.docker.com/r/fthiagomedeiros/udacity-frontend), [REST API User](https://hub.docker.com/r/fthiagomedeiros/udacity-restapi-user), [REST API Feed](https://hub.docker.com/r/fthiagomedeiros/udacity-restapi-feed)
 
 
-#### 2.3. The applications runs in a container without errors
+### 2.3. The applications runs in a container without errors
 
 To run the application locally, you have to set some environment variables and credentials for access to AWS S3 resource before run the step 2.1 above.
 In order to facilitate the code execution, I have provided the files config.ts that has harcoded the required variables. 
