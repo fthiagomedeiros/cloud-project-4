@@ -42,3 +42,7 @@ spec:
 # kubectl port-forward service/frontend 8100:8100
 # kubectl port-forward service/reverseproxy 8080:8080
 
+# In order to keep my container alive in a Kubernetes cluster, we have to run a task into the container
+  CMD ["sh", "-c", "tail -f /dev/null"]
+
+

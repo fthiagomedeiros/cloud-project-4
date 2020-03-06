@@ -65,15 +65,16 @@ To run the services locally, you have to set the environment variables to be pro
 
 export const config = {
   "dev": {
-    "username": "db_username",
-    "password": "db_password",
-    "database": "udagram",
-    "host": "database_endpoint",
+    "username": process.env.POSTGRESS_USERNAME,
+    "password": process.env.POSTGRESS_PASSWORD,
+    "database": process.env.POSTGRESS_DB,
+    "host": process.env.POSTGRESS_HOST,
     "dialect": "postgres",
-    "aws_reigion": "us-east-1",
-    "aws_profile": "default",
-    "aws_media_bucket": "bucket_name",
-    "url": "localhost:8100" }
+    "aws_region": process.env.AWS_REGION,
+    "aws_profile": process.env.AWS_PROFILE,
+    "aws_media_bucket": process.env.AWS_BUCKET,
+    "url": process.env.URL
+  }
 };
 ```
 
@@ -93,10 +94,12 @@ docker-compose -f docker-compose-build.yaml build --parallel
 docker-compose up
 ```
 
+> _tip_: I have provided the file _config.ts_ to be changed into the folder _/src/config_ in both projects. _/udacity-c3-restapi-user/src/config_ and _/udacity-c3-restapi-feed/src/config_
+
 
 ### 2.2. The project have public docker images
 
-**The Dockerhub images are available in the following links:** [Reverse Proxy image](https://hub.docker.com/r/fthiagomedeiros/reverseproxy), [Frontend image](https://hub.docker.com/r/fthiagomedeiros/udacity-frontend), [REST API User](https://hub.docker.com/r/fthiagomedeiros/udacity-restapi-user), [REST API Feed](https://hub.docker.com/r/fthiagomedeiros/udacity-restapi-feed)
+The Dockerhub images are available in the following links: [Reverse Proxy image](https://hub.docker.com/r/fthiagomedeiros/reverseproxy), [Frontend image](https://hub.docker.com/r/fthiagomedeiros/udacity-frontend), [REST API User](https://hub.docker.com/r/fthiagomedeiros/udacity-restapi-user), [REST API Feed](https://hub.docker.com/r/fthiagomedeiros/udacity-restapi-feed)
 
 
 ### 2.3. The applications runs in a container without errors
