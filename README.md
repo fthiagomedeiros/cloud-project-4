@@ -84,12 +84,14 @@ You'll need to install docker https://docs.docker.com/install/. Open a new termi
 **1. Build the images:**
 
 ```bash
-docker-compose -f docker-compose-build.yaml build --parallel```
+docker-compose -f docker-compose-build.yaml build --parallel
+```
 
 **2. Run the container:**
 
 ```bash
-docker-compose up```
+docker-compose up
+```
 
 
 ### 2.2. The project have public docker images
