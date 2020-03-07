@@ -52,17 +52,35 @@ ionic build
 ```
 ***
 
-# Project Rubric (Execution)
+# Udacity - Cloud Developer Nanodegree (Project 4 - k8s, docker)
 ***
+
+
+
+## 1. CI/CD, Github & Code Quality
+
+### 1.1. The project demonstrates an understanding of CI and Github
+
+Prior execution of the system, you have to:
+
+1. Copy to the folder ./udacity-c3-deployment/docker/ the file _docker-compose.yaml_ provided into zip file.
+This file provides all environment variables to start running the services.
+2. Include AWS credentials to file credentials to allow AWS S3 bucket access. 
+**(credentials file is into copied to folder ./udacity-c3-deployment/docker/aws)**
+
+
 
 ## 2. Container
 
 ### 2.1. The app is containerized
 
-To run the services locally, you have to set the environment variables to be provided to the system.
+Prior execution of the system, you have to:
+
+1. Copy to the folder ./udacity-c3-deployment/docker/ the file _docker-compose.yaml_ provided into zip file
+2. Include AWS credentials to file credentials to allow AWS S3 bucket access. 
+**(credentials file is into copied to folder ./udacity-c3-deployment/docker/aws)**
 
 ```typescript
-
 export const config = {
   "dev": {
     "username": process.env.POSTGRESS_USERNAME,
@@ -77,7 +95,6 @@ export const config = {
   }
 };
 ```
-
 
 #### Setup Docker Environment
 You'll need to install docker https://docs.docker.com/install/. Open a new terminal within the project directory and run:
@@ -94,7 +111,8 @@ docker-compose -f docker-compose-build.yaml build --parallel
 docker-compose up
 ```
 
-> _tip_: I have provided the file _config.ts_ to be changed into the folder _/src/config_ in both projects. _/udacity-c3-restapi-user/src/config_ and _/udacity-c3-restapi-feed/src/config_
+> _tip_: To facilitate code execution, I have provided the file docker-compose.yaml ans aws credentials 
+> file to be changed into the folder _/docker/_
 
 
 ### 2.2. The project have public docker images
