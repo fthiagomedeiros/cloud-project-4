@@ -108,4 +108,8 @@ is available pods screenshot folder.
 
 You will be able to run using minikube.
 Install minikube and run the script deployment.sh located into folder k8s.
-Please, provide the secrets and environment variables as necessary into the files **__aws-secret.yaml, env-configmap.yaml and env-secret.yaml__**
+Please, provide the secrets and environment variables as necessary into the files **__aws-secret.yaml__** to point to credentials for s3 bucket. I have provided credentials for **__env-configmap.yaml and env-secret.yaml__**.
+
+You should change the bucket name in env-configmap.yaml and credentials for access to S3 bucket in order to have valid credentials to access your s3 bucket
+
+
