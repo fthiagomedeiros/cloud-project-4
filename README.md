@@ -79,4 +79,26 @@ To run the application locally, you have to set the environment variables and cr
 
 ### 3.1. The application runs on a cluster in the cloud
 
-To run the project into a k8s cluster in the cloud, run the script __deployment.sh__ placed into folder k8s.
+All the files to deploy in the cloud are located into k8s folder.
+Deployments and Services.
+
+backend-feed-deployment.yaml
+backend-feed-service.yaml
+
+backend-user-deployment.yaml
+backend-user-service.yaml
+
+reverseproxy-deployment.yaml
+reverseproxy-service.yaml
+
+frontend-deployment.yaml
+frontend-service.yaml
+
+```shell script
+kubectl get pods
+```
+screenshot is available pods screenshot folder.
+
+You will be able to run using minikube.
+Install minikube and run the script deployment.sh located into folder k8s.
+Please, provide the secrets as necessary into the files **__aws-secret.yaml, env-configmap.yaml and env-secret.yaml__**
