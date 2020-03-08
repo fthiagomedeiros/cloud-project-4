@@ -5,7 +5,7 @@ metadata:
     service: backend-feed
   name: backend-feed
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       service: backend-feed
@@ -79,18 +79,4 @@ spec:
       volumes:
       - name: aws-secret
         secret:
-          secretName: aws-secret       
----
-apiVersion: v1
-kind: Service
-metadata:
-  labels:
-    service: backend-feed
-  name: backend-feed
-spec:
-  ports:
-    - name: "8080"
-      port: 8080
-      targetPort: 8080
-  selector:
-    service: backend-feed
+          secretName: aws-secret

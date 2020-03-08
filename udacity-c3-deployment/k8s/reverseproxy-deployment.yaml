@@ -5,7 +5,7 @@ metadata:
     service: reverseproxy
   name: reverseproxy
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       service: reverseproxy
@@ -28,18 +28,3 @@ spec:
           ports:
             - containerPort: 8080
       restartPolicy: Always
----
-apiVersion: v1
-kind: Service
-metadata:
-  labels:
-    service: reverseproxy
-  name: reverseproxy
-spec:
-  ports:
-    - name: "8080"
-      port: 8080
-      targetPort: 8080
-  selector:
-    service: reverseproxy
-#  type: LoadBalancer
