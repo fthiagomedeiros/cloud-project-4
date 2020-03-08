@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 data:
-  AWS_BUCKET: udacity-project-02
+  AWS_BUCKET: ___INSERT_BUCKET_NAME_ASSOCIATED_YOUR_CREDENTIALS_IN_VOLUME_BELOW___
   AWS_PROFILE: default
   AWS_REGION: us-east-1
   JWT_SECRET: privatesecretjwttokentest2020
