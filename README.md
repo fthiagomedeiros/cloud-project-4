@@ -83,22 +83,29 @@ All the files to deploy in the cloud are located into k8s folder.
 Deployments and Services.
 
 backend-feed-deployment.yaml
+ 
 backend-feed-service.yaml
 
 backend-user-deployment.yaml
+
 backend-user-service.yaml
 
 reverseproxy-deployment.yaml
+
 reverseproxy-service.yaml
 
 frontend-deployment.yaml
+
 frontend-service.yaml
+
+
+The image showing the running pods after the following statement 
 
 ```shell script
 kubectl get pods
 ```
-screenshot is available pods screenshot folder.
+is available pods screenshot folder.
 
 You will be able to run using minikube.
 Install minikube and run the script deployment.sh located into folder k8s.
-Please, provide the secrets as necessary into the files **__aws-secret.yaml, env-configmap.yaml and env-secret.yaml__**
+Please, provide the secrets and environment variables as necessary into the files **__aws-secret.yaml, env-configmap.yaml and env-secret.yaml__**
