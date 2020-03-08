@@ -11,28 +11,28 @@ services:
   backend-user:
     image: fthiagomedeiros/udacity-restapi-user
     environment:
-      POSTGRESS_USERNAME: $POSTGRESS_USERNAME
-      POSTGRESS_PASSWORD: $POSTGRESS_PASSWORD 
-      POSTGRESS_DB: $POSTGRESS_DB 
-      POSTGRESS_HOST: $POSTGRESS_HOST 
-      AWS_REGION: $AWS_REGION 
-      AWS_PROFILE: $AWS_PROFILE 
-      AWS_BUCKET: $AWS_BUCKET
-      JWT_SECRET: $JWT_SECRET
+      POSTGRESS_USERNAME: postgres
+      POSTGRESS_PASSWORD: udacitynanodegree
+      POSTGRESS_DB: udagram
+      POSTGRESS_HOST: udacity-nanodegree.c6vnmidtx8cx.us-west-2.rds.amazonaws.com
+      AWS_REGION: us-east-1
+      AWS_PROFILE: default
+      AWS_BUCKET: udacity-project-02
+      JWT_SECRET: tokenkeygenerator
       URL: "http://localhost:8100"
   backend-feed:
     image: fthiagomedeiros/udacity-restapi-feed
     volumes:
       - $HOME/.aws:/root/.aws
     environment:
-      POSTGRESS_USERNAME: $POSTGRESS_USERNAME
-      POSTGRESS_PASSWORD: $POSTGRESS_PASSWORD 
-      POSTGRESS_DB: $POSTGRESS_DB 
-      POSTGRESS_HOST: $POSTGRESS_HOST 
-      AWS_REGION: $AWS_REGION 
-      AWS_PROFILE: $AWS_PROFILE 
-      AWS_BUCKET: $AWS_BUCKET
-      JWT_SECRET: $JWT_SECRET
+      POSTGRESS_USERNAME: postgres
+      POSTGRESS_PASSWORD: udacitynanodegree
+      POSTGRESS_DB: udagram
+      POSTGRESS_HOST: udacity-nanodegree.c6vnmidtx8cx.us-west-2.rds.amazonaws.com
+      AWS_REGION: us-east-1
+      AWS_PROFILE: default
+      AWS_BUCKET: udacity-project-02
+      JWT_SECRET: tokenkeygenerator
       URL: "http://localhost:8100"
   frontend:
     image: fthiagomedeiros/udacity-frontend
