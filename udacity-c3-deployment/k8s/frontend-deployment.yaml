@@ -5,7 +5,7 @@ metadata:
   labels:
     service: frontend
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       service: frontend
@@ -30,18 +30,3 @@ spec:
             memory: "1024Mi"
             cpu: "500m"                
       restartPolicy: Always
----
-apiVersion: v1
-kind: Service
-metadata:
-  labels:
-    service: frontend
-  name: frontend
-spec:
-  ports:
-    - name: "8100"
-      port: 8100
-      targetPort: 80
-  selector:
-    service: frontend
-#  type: LoadBalancer
