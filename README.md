@@ -61,13 +61,29 @@ ionic build
 
 ### 1.1. The project demonstrates an understanding of CI and Github
 
-Prior execution of the system, you have to:
+Please, check the .travis.yml file into project root folder.
 
-1. Copy to the folder ./udacity-c3-deployment/docker/ the file _docker-compose.yaml_ provided into zip file.
-This file provides all environment variables to start running the services.
-2. Include AWS credentials to file credentials to allow AWS S3 bucket access. 
-**(credentials file is into copied to folder ./udacity-c3-deployment/docker/aws)**
 
+### The project has a proper documentation
+
+### The project use continuous deployments (CD)
+
+I have included in __.travis.yml__ the following commands:
+
+```yaml
+install:
+  - docker-compose -f udacity-c3-deployment/docker/docker-compose-build.yaml build --parallel 
+  - docker login --username=${DOCKER_USERNAME} --password=${DOCKER_PASSWORD}
+  - docker-compose -f udacity-c3-deployment/docker/docker-compose-build.yaml push
+
+# safelist
+branches:
+  only:
+  - master
+```
+
+It means when a change is made in the master or development branches, 
+a new version of docker images is sent to the public repository after building
 
 
 ## 2. Container
