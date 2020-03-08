@@ -110,6 +110,6 @@ You will be able to run using minikube.
 Install minikube and run the script deployment.sh located into folder k8s.
 Please, provide the secrets and environment variables as necessary into the files **__aws-secret.yaml__** to point to credentials for s3 bucket. I have provided credentials for **__env-configmap.yaml and env-secret.yaml__**.
 
-You should change the bucket name in env-configmap.yaml and credentials for access to S3 bucket in order to have valid credentials to access your s3 bucket
+You should change the bucket name (AWS_BUCKET) in [env-configmap.yaml](https://github.com/fthiagomedeiros/udacity-cloud-project4/blob/master/udacity-c3-deployment/k8s/env-configmap.yaml) and [docker-compose.yaml](https://github.com/fthiagomedeiros/udacity-cloud-project4/blob/master/udacity-c3-deployment/docker/docker-compose.yaml) and credentials for access to S3 bucket in order to have valid credentials to access your s3 bucket
 
 
