@@ -73,3 +73,10 @@ The Dockerhub images are available in the following links: [Reverse Proxy image]
 
 To run the application locally, you have to set the environment variables and credentials for access to AWS S3 bucket as shown in
 2.1 step.
+
+
+## 3. Deployment
+
+### 3.1. The application runs on a cluster in the cloud
+
+To run the project into a k8s cluster in the cloud, run the script __deployment.sh__ placed into folder k8s.
