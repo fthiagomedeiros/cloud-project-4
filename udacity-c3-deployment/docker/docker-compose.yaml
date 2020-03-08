@@ -31,7 +31,7 @@ services:
       POSTGRESS_HOST: udacity-nanodegree.c6vnmidtx8cx.us-west-2.rds.amazonaws.com
       AWS_REGION: us-east-1
       AWS_PROFILE: default
-      AWS_BUCKET: udacity-project-02
+      AWS_BUCKET: ___INSERT_BUCKET_NAME_ASSOCIATED_YOUR_CREDENTIALS_IN_VOLUME_BELOW___
       JWT_SECRET: tokenkeygenerator
       URL: "http://localhost:8100"
   frontend:
