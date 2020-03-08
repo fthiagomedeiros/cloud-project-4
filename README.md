@@ -104,7 +104,7 @@ The image showing the running pods after the following statement
 ```shell script
 kubectl get pods
 ```
-is available pods screenshot folder.
+is available pods [screenshot folder](https://github.com/fthiagomedeiros/udacity-cloud-project4/tree/master/pods%20screenshot).
 
 You will be able to run using minikube.
 Install minikube and run the script deployment.sh located into folder k8s.
