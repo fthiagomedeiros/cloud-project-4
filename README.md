@@ -48,7 +48,7 @@ Prior execution of the system, you have to:
       URL: "http://localhost:8100"
 ```
 
-##### Setup Docker Environment
+#### Setup Docker Environment
 You'll need to install docker https://docs.docker.com/install/. Open a new terminal within the project directory and run:
 
 **1. Build the images:**
